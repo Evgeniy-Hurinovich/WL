@@ -10,9 +10,19 @@ export function RailNavigation({ items, activeIndex, onSelect }: RailNavigationP
   return (
     <aside className="rail-nav" aria-label="Навигация по разделам">
       <div className="rail-brand">
-        <span className="rail-brand-mark">A2</span>
+        <a
+          className="rail-brand-mark rail-brand-link"
+          href="https://a2c.by/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Перейти на сайт A2 Consulting"
+        >
+          A2
+        </a>
         <div>
-          <div className="rail-brand-title">WestLine</div>
+          <a className="rail-brand-title rail-brand-link" href="https://wline.by/" target="_blank" rel="noreferrer">
+            WestLine
+          </a>
           <div className="rail-brand-subtitle">Защита аудита</div>
         </div>
       </div>

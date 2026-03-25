@@ -92,6 +92,17 @@ a {
   gap: 14px;
 }
 
+.rail-brand-link {
+  display: inline-block;
+  transform: translateY(0);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.rail-brand-link:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
 .rail-brand-mark {
   width: 42px;
   height: 42px;

@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'WestLine — защита результатов аудита | A2 Consulting',
+  title: 'WL: AS-IS',
   description:
     'Одностраничная executive-презентация для защиты результатов AS-IS аудита WestLine и формулирования следующего этапа трансформации.',
 };
