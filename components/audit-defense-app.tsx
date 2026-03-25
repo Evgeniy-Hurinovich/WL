@@ -433,6 +433,59 @@ function ArtefactsScene() {
     },
   ] as const;
 
+  const files = [
+    {
+      title: 'Закупки - описание процесса.xlsx',
+      href: 'https://docs.google.com/spreadsheets/d/10iz4UWXyQD0K06os-4e-nJqvHIQvi3cm/edit?usp=drive_link&ouid=110766772817510060509&rtpof=true&sd=true',
+      kind: 'XLSX',
+    },
+    {
+      title: 'Все заказы.xlsx',
+      href: 'https://docs.google.com/spreadsheets/d/1vkjqnSj8hQA1MzLmJ84L776yxNKoW7vm/edit?usp=drive_link&ouid=110766772817510060509&rtpof=true&sd=true',
+      kind: 'XLSX',
+    },
+    {
+      title: 'План предоплат.xlsx',
+      href: 'https://docs.google.com/spreadsheets/d/1xnGuqwWRTGyRnX7zyp0HhnWfppmIanwK/edit?usp=drive_link&rtpof=true&sd=true',
+      kind: 'XLSX',
+    },
+    {
+      title: 'Китай предоплаты.xlsx',
+      href: 'https://docs.google.com/spreadsheets/d/1wQUc8fulAGol46WY8KuAV-jTsNRjP37g/edit?usp=drive_link&rtpof=true&sd=true',
+      kind: 'XLSX',
+    },
+    {
+      title: 'Актуальное_состояние_контейнеров.xlsx',
+      href: 'https://docs.google.com/spreadsheets/d/1Xu3xvy3fkoKFMpCGJ_gfc2do-5Lg4knk/edit?usp=drive_link&rtpof=true&sd=true',
+      kind: 'XLSX',
+    },
+    {
+      title: 'График проверок.xlsx',
+      href: 'https://docs.google.com/spreadsheets/d/1z_E-krdf9YONrrcaA1pGCsLRdRwDww3t/edit?usp=drive_link&rtpof=true&sd=true',
+      kind: 'XLSX',
+    },
+    {
+      title: 'Алгоритм создания и смены ЦГ.docx',
+      href: 'https://docs.google.com/document/d/1sa0I4tv2P0njeM_FvL72917BrGwXE2tm/edit?usp=drive_link&ouid=110766772817510060509&rtpof=true&sd=true',
+      kind: 'DOCX',
+    },
+    {
+      title: 'Виды цен и ценовые группы.docx',
+      href: 'https://docs.google.com/document/d/18GE5aue7iuQ3F2p0hYnvrQjP5cwrTaNw/edit?usp=drive_link&ouid=110766772817510060509&rtpof=true&sd=true',
+      kind: 'DOCX',
+    },
+    {
+      title: 'Чек-лист по приходам и установке цен.docx',
+      href: 'https://docs.google.com/document/d/1arQ1xXDtIfMd-v08dbGPROoqcMYJtMjY/edit?usp=drive_link&ouid=110766772817510060509&rtpof=true&sd=true',
+      kind: 'DOCX',
+    },
+    {
+      title: 'УЦ 126 03.03.2026.xlsx',
+      href: 'https://docs.google.com/spreadsheets/d/1ezDk9R0N9YsOlBIsqZ8Pj0_EYiLCTXn7/edit?usp=drive_link&ouid=110766772817510060509&rtpof=true&sd=true',
+      kind: 'XLSX',
+    },
+  ] as const;
+
   return (
     <SectionFrame
       eyebrow={scenes[7].eyebrow}
@@ -457,6 +510,31 @@ function ArtefactsScene() {
             <div className="artefact-title">{item.title}</div>
           </a>
         ))}
+      </div>
+
+      <div className="artefacts-files premium-panel">
+        <div className="panel-title">Файлы и документы</div>
+        <div className="artefacts-files-grid" role="list">
+          {files.map((item) => (
+            <a
+              key={item.href}
+              className="artefacts-file"
+              href={item.href}
+              target="_blank"
+              rel="noreferrer"
+              role="listitem"
+              aria-label={`Открыть файл: ${item.title}`}
+            >
+              <span className="artefacts-file-kind" aria-hidden="true">
+                {item.kind}
+              </span>
+              <span className="artefacts-file-title">{item.title}</span>
+              <span className="artefacts-file-arrow" aria-hidden="true">
+                →
+              </span>
+            </a>
+          ))}
+        </div>
       </div>
     </SectionFrame>
   );
