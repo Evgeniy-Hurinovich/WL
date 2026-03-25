@@ -234,6 +234,82 @@ a {
   z-index: 1;
 }
 
+.scene-stage-roots::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(135deg, rgba(7, 17, 27, 0.78), rgba(7, 17, 27, 0.4)),
+    url('/roots-bg.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.scene-stage-roots > * {
+  position: relative;
+  z-index: 1;
+}
+
+.scene-stage-tobe::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(135deg, rgba(7, 17, 27, 0.78), rgba(7, 17, 27, 0.4)),
+    url('/tobe-bg.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.scene-stage-tobe > * {
+  position: relative;
+  z-index: 1;
+}
+
+.scene-stage-risks::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(135deg, rgba(7, 17, 27, 0.78), rgba(7, 17, 27, 0.4)),
+    url('/risks-bg.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.scene-stage-risks > * {
+  position: relative;
+  z-index: 1;
+}
+
+.scene-stage-next::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(135deg, rgba(7, 17, 27, 0.78), rgba(7, 17, 27, 0.4)),
+    url('/next-bg.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.scene-stage-next > * {
+  position: relative;
+  z-index: 1;
+}
+
 .scene-shell {
   display: grid;
   grid-template-rows: auto 1fr;

@@ -105,6 +105,14 @@ export function AuditDefenseApp() {
                   ? 'scene-stage-process'
                   : activeScene.id === 'landscape'
                     ? 'scene-stage-landscape'
+                    : activeScene.id === 'roots'
+                      ? 'scene-stage-roots'
+                      : activeScene.id === 'tobe'
+                        ? 'scene-stage-tobe'
+                        : activeScene.id === 'risks'
+                          ? 'scene-stage-risks'
+                          : activeScene.id === 'next'
+                            ? 'scene-stage-next'
                     : ''
             }`}
           >
