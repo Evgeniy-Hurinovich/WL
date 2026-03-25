@@ -98,7 +98,15 @@ export function AuditDefenseApp() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -80 }}
             transition={TRANSITION}
-            className="scene-stage"
+            className={`scene-stage ${
+              activeScene.id === 'intro'
+                ? 'scene-stage-intro'
+                : activeScene.id === 'process'
+                  ? 'scene-stage-process'
+                  : activeScene.id === 'landscape'
+                    ? 'scene-stage-landscape'
+                    : ''
+            }`}
           >
             {activeScene.id === 'intro' ? <IntroScene onOpen={setDrawerItem} /> : null}
             {activeScene.id === 'process' ? <ProcessScene onOpen={setDrawerItem} /> : null}
@@ -142,15 +150,15 @@ function IntroScene({ onOpen }: SceneProps) {
             От AS-IS — к целевой архитектуре.
           </h2>
           <p className="hero-copy">
-            Позиция защиты строится вокруг зрелого executive narrative: бизнес WestLine уже опирается на сквозной
+            Позиция защиты строится вокруг зрелого управленческого нарратива: бизнес WestLine уже опирается на сквозной
             процесс, но его инструменты еще не образуют единую управляемую платформу.
           </p>
           <TagList
             items={[
-              'Executive consulting presentation',
-              'Premium dark aesthetic',
-              'Horizontal presentation flow',
-              'Drilldown for live defense',
+              'От Excel‑центричной модели',
+              'К единой управляемой платформе',
+              'Сквозной контроль закупок и цен',
+              'Снижение операционных рисков',
             ]}
           />
         </div>
@@ -159,7 +167,7 @@ function IntroScene({ onOpen }: SceneProps) {
           <MetricCard value="7" label="ключевых процессов в единой цепочке" />
           <MetricCard value=">20" label="китайских поставщиков в месячном цикле" />
           <MetricCard value="6" label="закупщиков в сквозном контуре заказа" />
-          <MetricCard value="5–6 мес." label="длина критичного supply cycle" />
+          <MetricCard value="5–6 мес." label="длина критичного цикла поставки" />
         </div>
 
         <div className="two-column-block">
@@ -217,7 +225,7 @@ function LandscapeScene({ onOpen }: SceneProps) {
           <div className="network-core">
             <div className="network-core-ring" />
             <div className="network-core-label">
-              <span>Excel core</span>
+              <span>Ядро Excel</span>
               <strong>«Все заказы»</strong>
             </div>
           </div>
@@ -264,7 +272,7 @@ function RootCauseScene({ onOpen }: SceneProps) {
         </div>
 
         <div className="matrix-panel premium-panel">
-          <div className="panel-title">Problem → Recommendation → Solution type</div>
+          <div className="panel-title">Проблема → Рекомендация → Тип решения</div>
           <div className="matrix-table">
             {recommendationMatrix.map(([problem, recommendation, type]) => (
               <div key={problem} className="matrix-row">
@@ -298,7 +306,7 @@ function RisksScene({ onOpen }: SceneProps) {
         </div>
 
         <div className="matrix-panel premium-panel">
-          <div className="panel-title">Heatmap summary</div>
+          <div className="panel-title">Сводка тепловой карты</div>
           <div className="risk-table">
             {riskMatrix.map(([risk, impact, probability]) => (
               <div key={risk} className="matrix-row">
@@ -320,19 +328,19 @@ function ToBeScene({ onOpen }: SceneProps) {
       <div className="tobe-grid">
         <div className="architecture-panel premium-panel">
           <div className="architecture-column">
-            <div className="arch-label">Foundation</div>
-            <div className="arch-box">Unified master data</div>
-            <div className="arch-box">Raw / Calc / Output separation</div>
+            <div className="arch-label">Основа</div>
+            <div className="arch-box">Единый слой master data</div>
+            <div className="arch-box">Разделение данных: Raw / Calc / Output</div>
           </div>
           <div className="architecture-column">
-            <div className="arch-label">Workflow</div>
-            <div className="arch-box">Approvals & lifecycle statuses</div>
-            <div className="arch-box">Automatic pre-check</div>
+            <div className="arch-label">Процессы</div>
+            <div className="arch-box">Согласования и статусы жизненного цикла</div>
+            <div className="arch-box">Автоматический pre-check</div>
           </div>
           <div className="architecture-column">
-            <div className="arch-label">Analytics</div>
-            <div className="arch-box">Auto-forecast + exceptions</div>
-            <div className="arch-box">Price decision card & error report</div>
+            <div className="arch-label">Аналитика</div>
+            <div className="arch-box">Автопрогноз + исключения</div>
+            <div className="arch-box">Карточка ценового решения и отчёт по ошибкам</div>
           </div>
         </div>
 
@@ -370,17 +378,17 @@ function NextStepScene({ onOpen }: SceneProps) {
         </div>
 
         <div className="premium-panel close-panel">
-          <div className="panel-title">How to close the meeting</div>
+          <div className="panel-title">Как завершить встречу</div>
           <blockquote>
             Мы не предлагаем WestLine «еще один инструмент». Мы предлагаем следующий уровень управляемости: от
-            Excel-centric operating model — к целевой платформе принятия и исполнения решений.
+            операционной модели, завязанной на Excel, — к целевой платформе принятия и исполнения решений.
           </blockquote>
           <TagList
             items={[
               'TO-BE design',
-              'Target architecture',
-              'Pilot definition',
-              'Roadmap & economics',
+              'Целевая архитектура',
+              'Формат пилота',
+              'Дорожная карта и экономика',
             ]}
           />
         </div>

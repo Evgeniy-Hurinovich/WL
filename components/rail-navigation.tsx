@@ -13,7 +13,7 @@ export function RailNavigation({ items, activeIndex, onSelect }: RailNavigationP
         <span className="rail-brand-mark">A2</span>
         <div>
           <div className="rail-brand-title">WestLine</div>
-          <div className="rail-brand-subtitle">Audit Defense</div>
+          <div className="rail-brand-subtitle">Защита аудита</div>
         </div>
       </div>
 
@@ -37,8 +37,8 @@ export function RailNavigation({ items, activeIndex, onSelect }: RailNavigationP
       </div>
 
       <div className="rail-footer">
-        <div>← → / wheel</div>
-        <div>presentation mode</div>
+        <div>← → / колесо</div>
+        <div>режим презентации</div>
       </div>
     </aside>
   );
