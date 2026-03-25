@@ -113,6 +113,8 @@ export function AuditDefenseApp() {
                           ? 'scene-stage-risks'
                           : activeScene.id === 'next'
                             ? 'scene-stage-next'
+                      : activeScene.id === 'artefacts'
+                        ? 'scene-stage-artefacts'
                     : ''
             }`}
           >
@@ -123,6 +125,7 @@ export function AuditDefenseApp() {
             {activeScene.id === 'risks' ? <RisksScene onOpen={setDrawerItem} /> : null}
             {activeScene.id === 'tobe' ? <ToBeScene onOpen={setDrawerItem} /> : null}
             {activeScene.id === 'next' ? <NextStepScene onOpen={setDrawerItem} /> : null}
+            {activeScene.id === 'artefacts' ? <ArtefactsScene /> : null}
           </motion.div>
         </AnimatePresence>
       </div>
@@ -401,6 +404,59 @@ function NextStepScene({ onOpen }: SceneProps) {
             ]}
           />
         </div>
+      </div>
+    </SectionFrame>
+  );
+}
+
+function ArtefactsScene() {
+  const artefacts = [
+    {
+      id: '1XdJkU4N0uLegyq76f8ugTT7P_-GHaBcw',
+      title: 'Отдел продаж',
+      href: 'https://drive.google.com/file/d/1XdJkU4N0uLegyq76f8ugTT7P_-GHaBcw/view?usp=drive_link',
+    },
+    {
+      id: '1jdTQ0efHZJ7un2AuoefdYi9cE0UhClBx',
+      title: 'Бухгалтерия',
+      href: 'https://drive.google.com/file/d/1jdTQ0efHZJ7un2AuoefdYi9cE0UhClBx/view?usp=drive_link',
+    },
+    {
+      id: '1Rpb-6NXLizfb6_KP61UjaFYdTfmVnQpj',
+      title: 'Закупки',
+      href: 'https://drive.google.com/file/d/1Rpb-6NXLizfb6_KP61UjaFYdTfmVnQpj/view?usp=drive_link',
+    },
+    {
+      id: '1_yaPuO9aLEynIea6PWnbcysSb1JABnRJ',
+      title: 'Ценообразование',
+      href: 'https://drive.google.com/file/d/1_yaPuO9aLEynIea6PWnbcysSb1JABnRJ/view?usp=drive_link',
+    },
+  ] as const;
+
+  return (
+    <SectionFrame
+      eyebrow={scenes[7].eyebrow}
+      title={scenes[7].title}
+      summary={scenes[7].summary}
+      accent={scenes[7].accent === 'blue' ? 'blue' : 'gold'}
+    >
+      <div className="artefacts-grid">
+        {artefacts.map((item) => (
+          <a
+            key={item.id}
+            className="artefact-card premium-panel"
+            href={item.href}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`Открыть видео-интервью: ${item.title}`}
+          >
+            <div className="artefact-thumb" aria-hidden="true">
+              <img src={`https://drive.google.com/thumbnail?id=${item.id}&sz=w800`} alt="" loading="lazy" />
+              <div className="artefact-play">▶</div>
+            </div>
+            <div className="artefact-title">{item.title}</div>
+          </a>
+        ))}
       </div>
     </SectionFrame>
   );
