@@ -781,7 +781,7 @@ button.insight-card:hover {
   top: 18px;
   right: 18px;
   bottom: 18px;
-  width: min(420px, calc(100vw - 36px));
+  width: min(668px, calc(100vw - 36px));
   border-radius: 28px;
   padding: 22px;
   z-index: 12;
