@@ -812,7 +812,8 @@ button.insight-card:hover {
 
 .network-core-label strong {
   display: block;
-  font-size: 1.05rem;
+  font-size: 1.29rem;
+  transform: translateY(-40px);
 }
 
 .network-orbit {
@@ -822,21 +823,28 @@ button.insight-card:hover {
 
 .system-node {
   position: absolute;
-  max-width: 170px;
+  max-width: 315px;
   padding: 12px 14px;
   border-radius: 18px;
   border: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.03);
-  font-size: 0.84rem;
+  font-size: 1.22rem;
   line-height: 1.35;
 }
 
 .system-node:nth-child(1) { top: 7%; left: 8%; }
 .system-node:nth-child(2) { top: 19%; right: 8%; }
-.system-node:nth-child(3) { bottom: 16%; left: 9%; }
-.system-node:nth-child(4) { bottom: 8%; right: 12%; }
+.system-node:nth-child(3) { bottom: 9%; left: 16%; }
+.system-node:nth-child(4) {
+  bottom: 8%;
+  right: 12%;
+  width: 325px;
+  max-width: 325px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 .system-node:nth-child(5) { top: 44%; right: 4%; }
-.system-node:nth-child(6) { top: 52%; left: 4%; }
+.system-node:nth-child(6) { top: 42%; left: 4%; }
 .system-node:nth-child(7) { top: 72%; left: 50%; transform: translateX(-50%); }
 .system-node:nth-child(8) { top: 6%; left: 50%; transform: translateX(-50%); }
 
