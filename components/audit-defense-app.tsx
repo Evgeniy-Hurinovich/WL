@@ -536,6 +536,18 @@ function ArtefactsScene() {
           ))}
         </div>
       </div>
+
+      <div className="artefacts-as-is premium-panel">
+        <div className="panel-title">AS-IS отчёт</div>
+        <a
+          className="artefacts-as-is-action"
+          href="https://docs.google.com/document/d/19QcqNYDwCD0Y8NY1bYgNJxHULkGpxtvX/edit?usp=drive_link&ouid=110766772817510060509&rtpof=true&sd=true"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Открыть документ для просмотра
+        </a>
+      </div>
     </SectionFrame>
   );
 }

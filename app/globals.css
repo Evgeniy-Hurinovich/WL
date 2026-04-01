@@ -500,6 +500,35 @@ a {
   padding: 20px 20px 18px;
 }
 
+.artefacts-as-is {
+  margin: 18px auto 0;
+  max-width: min(1100px, 100%);
+  border-radius: 28px;
+  padding: 20px 20px 18px;
+}
+
+.artefacts-as-is-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 14px;
+  padding: 14px 22px;
+  border-radius: 18px;
+  border: 1px solid rgba(102, 164, 255, 0.26);
+  background: rgba(102, 164, 255, 0.12);
+  color: #cfe3ff;
+  font-weight: 650;
+  font-size: 1.02rem;
+  text-decoration: none;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.artefacts-as-is-action:hover {
+  transform: translateY(-2px);
+  border-color: rgba(102, 164, 255, 0.4);
+  background: rgba(102, 164, 255, 0.18);
+}
+
 .artefacts-files-grid {
   margin-top: 14px;
   display: grid;
@@ -1077,6 +1106,10 @@ button.insight-card:hover {
   }
 
   .artefacts-files {
+    padding: 18px 16px 16px;
+  }
+
+  .artefacts-as-is {
     padding: 18px 16px 16px;
   }
 
