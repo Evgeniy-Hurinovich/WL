@@ -14,7 +14,7 @@ export function SectionFrame({ eyebrow, title, summary, accent = 'gold', childre
       <div className="scene-header">
         <div className={`scene-eyebrow ${accent}`}>{eyebrow}</div>
         <h1 className="scene-title">{title}</h1>
-        <p className="scene-summary">{summary}</p>
+        {summary.trim() ? <p className="scene-summary">{summary}</p> : null}
       </div>
       <div className="scene-content">{children}</div>
     </section>

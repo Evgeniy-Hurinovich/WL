@@ -775,6 +775,21 @@ button.insight-card:hover {
   place-items: center;
 }
 
+.scene-stage-landscape .network-panel {
+  grid-column: 2;
+  align-self: start;
+  justify-self: end;
+  width: 1326px;
+  margin-top: -300px;
+}
+
+.scene-stage-landscape .stacked-column {
+  grid-column: 1 / -1;
+  width: 100%;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-content: start;
+}
+
 .network-core {
   position: relative;
   display: grid;

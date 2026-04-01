@@ -91,7 +91,7 @@ export const scenes: SceneDefinition[] = [
     railLabel: '08',
     eyebrow: 'Артефакты',
     title: 'Артефакты и материалы защиты',
-    summary: 'Раздел будет заполнен плитками и ссылками на ключевые документы, расчеты и презентационные материалы.',
+    summary: '',
     accent: 'blue',
   },
 ];
