@@ -44,6 +44,87 @@ a {
   text-decoration: none;
 }
 
+.access-gate-shell {
+  width: 100vw;
+  height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.access-gate-panel {
+  width: min(560px, 100%);
+  border-radius: 28px;
+  padding: 30px;
+}
+
+.access-gate-eyebrow {
+  margin: 0;
+  color: var(--gold);
+  font-size: 0.8rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.access-gate-title {
+  margin: 14px 0 10px;
+  font-size: clamp(1.9rem, 4vw, 2.4rem);
+  letter-spacing: -0.03em;
+}
+
+.access-gate-text {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.access-gate-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.access-gate-label {
+  font-size: 0.92rem;
+  color: #d9e5f3;
+}
+
+.access-gate-input {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--text);
+  border-radius: 14px;
+  padding: 12px 14px;
+  outline: none;
+}
+
+.access-gate-input:focus {
+  border-color: rgba(102, 164, 255, 0.5);
+}
+
+.access-gate-error {
+  margin: 0;
+  color: var(--danger);
+  font-size: 0.88rem;
+}
+
+.access-gate-button {
+  border: 1px solid rgba(102, 164, 255, 0.3);
+  background: linear-gradient(135deg, rgba(102, 164, 255, 0.2), rgba(212, 169, 95, 0.12));
+  color: var(--text);
+  border-radius: 14px;
+  padding: 12px 18px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+
+.access-gate-button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(102, 164, 255, 0.45);
+}
+
 .app-shell {
   position: relative;
   width: 100vw;
@@ -173,6 +254,24 @@ a {
   color: var(--muted);
   font-size: 0.9rem;
   line-height: 1.7;
+}
+
+.rail-logout {
+  margin-top: 10px;
+  width: 100%;
+  border: 1px solid rgba(102, 164, 255, 0.28);
+  background: rgba(102, 164, 255, 0.1);
+  color: #dce9fb;
+  border-radius: 12px;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: border-color 0.18s ease, background 0.18s ease, transform 0.18s ease;
+}
+
+.rail-logout:hover {
+  border-color: rgba(102, 164, 255, 0.45);
+  background: rgba(102, 164, 255, 0.16);
+  transform: translateY(-1px);
 }
 
 .viewport {

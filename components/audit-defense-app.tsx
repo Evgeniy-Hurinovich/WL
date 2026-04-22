@@ -23,7 +23,11 @@ import {
 
 const TRANSITION = { duration: 0.65, ease: [0.22, 1, 0.36, 1] } as const;
 
-export function AuditDefenseApp() {
+type AuditDefenseAppProps = {
+  onLogout?: () => void;
+};
+
+export function AuditDefenseApp({ onLogout }: AuditDefenseAppProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [drawerItem, setDrawerItem] = useState<DrillItem | null>(null);
   const wheelLockRef = useRef(false);
@@ -88,7 +92,7 @@ export function AuditDefenseApp() {
       <div className="ambient ambient-left" />
       <div className="ambient ambient-right" />
 
-      <RailNavigation items={scenes} activeIndex={activeIndex} onSelect={goTo} />
+      <RailNavigation items={scenes} activeIndex={activeIndex} onSelect={goTo} onLogout={onLogout} />
 
       <div className="viewport">
         <AnimatePresence mode="wait">

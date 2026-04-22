@@ -4,9 +4,10 @@ type RailNavigationProps = {
   items: { id: string; railLabel: string; eyebrow: string }[];
   activeIndex: number;
   onSelect: (index: number) => void;
+  onLogout?: () => void;
 };
 
-export function RailNavigation({ items, activeIndex, onSelect }: RailNavigationProps) {
+export function RailNavigation({ items, activeIndex, onSelect, onLogout }: RailNavigationProps) {
   return (
     <aside className="rail-nav" aria-label="Навигация по разделам">
       <div className="rail-brand">
@@ -49,6 +50,11 @@ export function RailNavigation({ items, activeIndex, onSelect }: RailNavigationP
       <div className="rail-footer">
         <div>← → / колесо</div>
         <div>режим презентации</div>
+        {onLogout ? (
+          <button type="button" className="rail-logout" onClick={onLogout}>
+            Выйти
+          </button>
+        ) : null}
       </div>
     </aside>
   );
