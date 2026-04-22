@@ -606,11 +606,18 @@ a {
   padding: 20px 20px 18px;
 }
 
+.artefacts-as-is-actions {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 .artefacts-as-is-action {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: 14px;
   padding: 14px 22px;
   border-radius: 18px;
   border: 1px solid rgba(102, 164, 255, 0.26);

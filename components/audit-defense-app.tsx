@@ -548,22 +548,24 @@ function ArtefactsScene() {
 
       <div className="artefacts-as-is premium-panel">
         <div className="panel-title">AS-IS отчёт</div>
-        <a
-          className="artefacts-as-is-action"
-          href="https://docs.google.com/document/d/1LrfhU9Vjio1GMe1zzJqWgIPB6IXB8qZd/edit?usp=drive_link&ouid=110766772817510060509&rtpof=true&sd=true"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Открыть документ для просмотра
-        </a>
-        <a
-          className="artefacts-as-is-action"
-          href="https://docs.google.com/presentation/d/1Yjf0FOdv1obEHPLmTZOJoX63ZU83Ty-f/edit?usp=drive_link&ouid=110766772817510060509&rtpof=true&sd=true"
-          target="_blank"
-          rel="noreferrer"
-        >
-          TO-BE отчет о бизнес-процессах — WestLine 08.04.2026 v1.pptx
-        </a>
+        <div className="artefacts-as-is-actions">
+          <a
+            className="artefacts-as-is-action"
+            href="https://docs.google.com/document/d/1LrfhU9Vjio1GMe1zzJqWgIPB6IXB8qZd/edit?usp=drive_link&ouid=110766772817510060509&rtpof=true&sd=true"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Открыть документ для просмотра
+          </a>
+          <a
+            className="artefacts-as-is-action"
+            href="https://docs.google.com/presentation/d/1Yjf0FOdv1obEHPLmTZOJoX63ZU83Ty-f/edit?usp=drive_link&ouid=110766772817510060509&rtpof=true&sd=true"
+            target="_blank"
+            rel="noreferrer"
+          >
+            TO-BE отчет о бизнес-процессах — WestLine 08.04.2026 v1.pptx
+          </a>
+        </div>
       </div>
     </SectionFrame>
   );
