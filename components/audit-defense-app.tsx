@@ -556,6 +556,14 @@ function ArtefactsScene() {
         >
           Открыть документ для просмотра
         </a>
+        <a
+          className="artefacts-as-is-action"
+          href="https://docs.google.com/presentation/d/1Yjf0FOdv1obEHPLmTZOJoX63ZU83Ty-f/edit?usp=drive_link&ouid=110766772817510060509&rtpof=true&sd=true"
+          target="_blank"
+          rel="noreferrer"
+        >
+          TO-BE отчет о бизнес-процессах — WestLine 08.04.2026 v1.pptx
+        </a>
       </div>
     </SectionFrame>
   );
