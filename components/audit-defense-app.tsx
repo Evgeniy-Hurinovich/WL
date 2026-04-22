@@ -431,6 +431,11 @@ function ArtefactsScene() {
       title: 'Ценообразование',
       href: 'https://drive.google.com/file/d/1_yaPuO9aLEynIea6PWnbcysSb1JABnRJ/view?usp=drive_link',
     },
+    {
+      id: '1z_nrBwbClHIQET35p_Pyy9X3hpYEyhwi',
+      title: 'Разнесение банковской выписки',
+      href: 'https://drive.google.com/file/d/1z_nrBwbClHIQET35p_Pyy9X3hpYEyhwi/view?usp=drive_link',
+    },
   ] as const;
 
   const files = [
@@ -541,7 +546,7 @@ function ArtefactsScene() {
         <div className="panel-title">AS-IS отчёт</div>
         <a
           className="artefacts-as-is-action"
-          href="https://docs.google.com/document/d/19QcqNYDwCD0Y8NY1bYgNJxHULkGpxtvX/edit?usp=drive_link&ouid=110766772817510060509&rtpof=true&sd=true"
+          href="https://docs.google.com/document/d/1LrfhU9Vjio1GMe1zzJqWgIPB6IXB8qZd/edit?usp=drive_link&ouid=110766772817510060509&rtpof=true&sd=true"
           target="_blank"
           rel="noreferrer"
         >

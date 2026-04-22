@@ -487,9 +487,9 @@ a {
 
 .artefacts-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 18px;
-  max-width: 50%;
+  max-width: min(1400px, 100%);
   margin: 0 auto;
 }
 
@@ -1059,12 +1059,13 @@ button.insight-card:hover {
   .metric-grid,
   .card-grid-4,
   .card-grid-7,
-  .architecture-panel,
-  .artefacts-grid {
+  .architecture-panel {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .artefacts-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 260px));
+    justify-content: center;
     max-width: 100%;
   }
 
@@ -1118,13 +1119,14 @@ button.insight-card:hover {
   .card-grid,
   .card-grid-4,
   .card-grid-7,
-  .artefacts-grid,
   .architecture-panel,
   .process-flow-bar {
     grid-template-columns: 1fr;
   }
 
   .artefacts-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 320px));
+    justify-content: center;
     max-width: 100%;
   }
 
